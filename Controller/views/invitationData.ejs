@@ -37,34 +37,35 @@
     	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
-			  <a class="navbar-brand" href="#">SSI CAFE</a>
-			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			  </button>
-			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-5 mb-lg-0">
-				  <li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="/">Home</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="/ssi">SSI</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="/page1">Order</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="/logout">Logout</a>
-				  </li>
-			  </div>
-			</div>
-		</nav>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">SSI CAFE</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-5 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/connected">Credential</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/food">Order</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
 
         <main class="form-signin">
             <div class="form-floating">
             <label for="floatingInput">Please enter a unique memorable name for this website:</label>
             <input type="text" class="form-control" name="name" id="memName" placeholder="memoName">
             <input type="text" class="form-control" name="email" id="email" placeholder="email">
+            
             </div>
             <br>
 			<button class="w-10 btn btn-lg btn-primary" type="submit" id="check">Check</button>
@@ -93,12 +94,12 @@
 						})
 					}).then((res) => res.json())
 
-					// status: false refers that users should not be allowed to use the memoName
-					if(!result.status) {
+					// status: true refers that the memoName already exist
+					if(result.status) {
 						alert("Please choose another memorable name. ")
 					}
-					// status: true refers that users should not be allowed to use the memoName 
-					else if(result.status) {
+					// status: false refers that the memoName is currently not in use 
+					else if(!result.status) {
 						alert("Your memorable name is unique. Now, please click the submit button!")
 						$('#submit').prop('disabled', false)
 						$('#check').prop('disabled', true)
