@@ -35,7 +35,7 @@ In BRAC University, we often need to maintain a long queue to order food. Theref
 
 3. The Controller folder currently contains package.json, package-lock.json and and .env.example file inside it.
 
-![App Screenshot](./_readme-images/1 - Controller folder.png)
+![App Screenshot](./_readme-images/1_Controller_folder.png)
 
 4. Now, go to the controller folder using the command:
 ```shell
@@ -199,7 +199,7 @@ npm start
 ```
 This will start the controller server. Now, if you open http://localhost:9999 from your browser you will see the a home page appeared there.
 
-![App Screenshot](./_readme-images/2 - homepage.png)
+![App Screenshot](./_readme-images/2_homepage.png)
 
 ## Part 02: Creating New Connection 
 In this section, we will create new conenction feature utilizing the Admin API of ACA-PY. 
