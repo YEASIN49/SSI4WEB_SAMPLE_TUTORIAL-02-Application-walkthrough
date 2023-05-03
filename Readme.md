@@ -35,7 +35,7 @@ In BRAC University, we often need to maintain a long queue to order food. Theref
 
 3. The Controller folder currently contains package.json, package-lock.json and and .env.example file inside it.
 
-![App Screenshot](./_readme-image/1 - Controller folder.png)
+![App Screenshot](./_readme-images/1 - Controller folder.png)
 
 4. Now, go to the controller folder using the command:
 ```shell
@@ -199,7 +199,7 @@ npm start
 ```
 This will start the controller server. Now, if you open http://localhost:9999 from your browser you will see the a home page appeared there.
 
-![App Screenshot](./_readme-image/2 - homepage.png)
+![App Screenshot](./_readme-images/2 - homepage.png)
 
 ## Part 02: Creating New Connection 
 In this section, we will create new conenction feature utilizing the Admin API of ACA-PY. 
@@ -361,7 +361,7 @@ The above API receives a request from user and render/return a new page called *
 
 Now, if you click on the ```Create new connection``` button, a new page with a form will be appear like below: 
 
-![App Screenshot](./_readme-image/3_newConnData.png)
+![App Screenshot](./_readme-images/3_newConnData.png)
 
 4. In the mentioned page, users will enter a unique memorable name ( memoName ) and email address and then the application will check whether the memoName already used by other users or not. If we check the code of ```invitationData.ejs``` file, we will see there is already an API endpoint ```/checkMemName``` is beign called when we click the check button from the browser. This API will do the checking part of the memoName. However, currently the API is not created yet. Therefore, we will create it now. To do this, copy the code below and pase it to ```server.js``` within the mentioned place to write code.
 
