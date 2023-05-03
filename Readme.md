@@ -2,7 +2,7 @@
 # ReLABS at BRACU Presents: Intro to SSI for web - Part II
 
 ## Prerequisites
-* You have completed the tutorial 01.
+* You have completed the [tutorial 01](https://github.com/YEASIN49/SSI4WEB_SAMPLE_TUTORIAL-01-Connection-Building-and-Playing-with-demo).
 * You are familier with NodeJs, mongodb.
 * You have mongodb installed locally.
 * You know what is API and how to call it.
